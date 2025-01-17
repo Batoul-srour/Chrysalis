@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrysalis</title>
+   
+    <link rel="stylesheet" href="../static/css/styles.css">
+
+    <link rel="shortcut icon" href="../static/images/logoo.png" type="image/svg+xml"/>
+    
+</head>
+<body>
+
+  <header>
+    <div class="header-ticker">
+        <ul>
+            <li>CHRYSALIS : Nourish Your Mind, Body, and Soul</li>
+            <li>Most Delicious Nutritious Meal Recipes</li>
+            <li>Fitness Classes: For Whatever Yout Body Requires</li>
+            <li>Exploring the depths of mental well-being, one article at a time.</li>
+        </ul>
+    </div>
+    
+    <nav>
+        <div class="navbar">
+            <a href="{{ url_for('index') }}" class="navbar-logo"></a>
+            <div class="navbar-links">
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="{{ url_for('recipes') }}">Recipes</a>
+                <a href="{{ url_for('fitness') }}">Fitness</a>
+                <a href="{{ url_for('mental_health') }}">Mental Health</a>
+                <a href="{{ url_for('admin_login') }}" class="admin-button">Admin</a>
+                {% if 'user_id' in session %}
+                <li><a href="{{ url_for('logout') }}" class="logout-button">Logout</a></li>
+            {% endif %}
+            </div>
+            <a href="{{ url_for('login') }}" class="navbar-joinlogo"></a>
+        </div>
+    </nav>
+</header>
+    <main>
+
+        <div class="slider-Intro">
+            <span id="slide-1"></span>
+            <span id="slide-2"></span>
+            <span id="slide-3"></span>
+            <span id="slide-4"></span>
+            <div class="image-container">
+              <img src="../static/images/pichealth.png" class="slide-Intro" />
+              <img src="../static/images/picfitness.png" class="slide-Intro"  />
+              <img src="../static/images/yoga.jpg" class="slide-Intro"  />
+              <img src="../static/images/sport.jpg" class="slide-Intro"  />
+            </div>
+            <div class="buttons">
+              <a href="#slide-1"></a>
+              <a href="#slide-2"></a>
+              <a href="#slide-3"></a>
+              <a href="#slide-4"></a>
+            </div>
+          </div>
+          
+
+          <div class="slogan">
+            <img src="/static/images/flowerLeft.png " class="left_flower">
+           <div class="philo">
+            <h2>From a Caterpillar, To a Vibrant Butterfly </h2>
+             <p>Strengthen Your Health , Body and Mind With Our Thorough Healthy Schedule.</p></div>
+             <img src="/static/images/flowerRight.png" class="right_flower">
+  
+            </div>
+
+
+            <div class="philosophy">
+               <img src="/static/images/yogaGirl.jpeg" class="philoImg">
+               <div class="philoCard">
+               <h2>Our Philosophy</h2>
+               <p> Transforming from a caterpillar to a butterfly requires not just growth, but also care and nourishment. Similarly, our journey to health and wellness demands dedication and attention.</p><p> Just as the caterpillar must nurture itself to emerge vibrant and free, let us nourish our bodies and minds with healthy choices, so we may spread our wings and soar with vitality
+                </p>
+            </div>
+            </div>
+            
+              <h1 class="target-title">Our Targets</h1>
+            
+            <div class="targets-container">
+             
+              <div class="card-img">
+                  <img src="../static/images/foodSymbol.png" alt="Nutrition Plan Icon">
+                  <h3>Healthy Food</h3>
+                  <p>Our least restrictive, most fun, but no less healthy, creative food recipes.</p>
+                  <ul>
+                      <li>Eat a rainbow of fruits and vegetables.</li>
+                      <li>Choose whole grains over refined ones.</li>
+                      <li>Stay hydrated with plenty of water.</li>
+                  </ul>
+              </div>
+              <div class="card-img">
+                  <img src="../static/images/mentalSymbol.png" alt="Training Plan Icon">
+                  <h3>Mind Peace</h3>
+                  <p>As you need to fill your body with nourishing food, you need to fill your mind with peaceful thoughts.</p>
+                  <ul>
+                      <li>Practice daily meditation or mindfulness exercises.</li>
+                      <li>Engage in regular physical activities like yoga or walking.</li>
+                      <li>Spend time in nature to rejuvenate your mind.</li>
+                  </ul>
+              </div>
+              <div class="card-img">
+                  <img src="../static/images/yogaSymbol.png" alt="Body Measurement Icon" style="height: 28%; width: 50%;">
+                  <h3>Body Plan</h3>
+                  <p>“Always take care of your body as much as you do when you are sick and you will never be sick.” – Nitin Namdeo</p>
+                  <ul>
+                      <li>Stay hydrated and drink plenty of water.</li>
+                      <li>Maintain a balanced diet rich in nutrients.</li>
+                      <li>Engage in regular physical activity.</li>
+                  </ul>
+                  
+              </div>
+          </div>
+        <div class="caterpillar">
+          <img src="/static/images/cocoon.png" class="cocoonImg">
+          <div class="pillarCard">
+            
+            <p> Just as a caterpillar undergoes radical changes within the chrysalis, this concept signifies a profound personal transformation, healing, and renewal experienced by individuals. Regarding body health, the chrysalis symbolizes a period of physical rejuvenation and restoration. It embodies the idea of nurturing the body through healthy practices, such as proper nutrition, regular exercise, and self-care routines. Just as a butterfly emerges from the chrysalis with vibrant colors and newfound strength, individuals can strive for improved physical vitality and well-being.
+             </p>
+         </div>
+            <img src="/static/images/flybutter.png"class="bfImg">
+            
+         </div>
+
+         <div class="slider-container">
+            <div class="video-slider">
+              <div class="slider">
+                <div class="slide">
+                  <iframe
+                    width="500"
+                    height="500"
+                    src="https://www.youtube.com/embed/VtLXhYc06rw"
+                    title="How the food we eat impacts mood, mental health"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="slide">
+                  <iframe
+                    width="500"
+                    height="480"
+                    src="https://www.youtube.com/embed/rtABcNUIQwQ"
+                    title="How Does Food Impact Mental Health?"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+      
+                <div class="slide">
+                  <iframe
+                    width="500"
+                    height="480"
+                    src="https://www.youtube.com/embed/xyQY8a-ng6g"
+                    title="How the food you eat affects your brain - Mia Nacamulli"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="slide">
+                  <iframe
+                    width="500"
+                    height="480"
+                    src="https://www.youtube.com/embed/8SsC9UWYPDM"
+                    title="Why Diet Might Be a Big Deal for Mental Health"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="slide">
+                  <iframe
+                    width="500"
+                    height="480"
+                    src="https://www.youtube.com/embed/r7JzLkMwMFc"
+                    title="Junk food affects mental health"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="slide">
+                  <iframe
+                    width="500"
+                    height="480"
+                    src="https://www.youtube.com/embed/LLBrCkSkukM"
+                    title="The Link Between Diet and Mental Health"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="contact-form-container" id="contactUs">
+            <h2>Contact us</h2>
+            <h3>Send your request</h3>
+            <form method="POST" action="{{ url_for('contact') }}">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your e-mail" required>
+                </div>
+                <textarea name="message" placeholder="Message" required></textarea>
+                <button type="submit">Send a message</button>
+            </form>
+        </div>
+        
+
+          
+    
+       
+    </main>
+   
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="footer__logo">CHRYSALIS</h1>
+        <h2>Contact Us</h2>
+        <address>
+          Ghobeiry, Old Airport Road, Beirut, Lebanon
+          <br>
+          maj032@usal.edu.lb
+        </address>
+      </div>
+      
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Our Links</h2>
+          <ul class="nav__ul">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('fitness') }}">Fitness</a></li>
+            <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
+            <li><a href="{{ url_for('store') }}">Shop</a></li>
+          </ul>
+        </li>
+        <li class="nav__item">
+          <h2 class="nav__title">Legal</h2>
+          <ul class="nav__ul">
+            <li><a href="{{ url_for('privacy_policy') }}">Privacy Policy</a></li>
+            <li><a href="{{ url_for('sitemap') }}">Sitemap</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Our Socials</h2>
+          <ul class="socialList nav__ul">
+            <li><a href="https://www.facebook.com/Usal.uni/" target="_blank" class="socialIcons"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="Facebook"/></a></li>
+            <li><a href="https://www.instagram.com/m_a_r_j_a_y/?hl=en" target="_blank" class="socialIcons"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram"/></a></li>
+            <li><a href="https://marketing.twitter.com/en/insights/covid19-trends-health-wellness" target="_blank" class="socialIcons"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="Twitter"/></a></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <div class="legal">
+        <p>© 2024 CHRYSALIS. All rights reserved.</p>
+        <div class="legal__links">
+          <span>All what you need for a perfect healthy lifestyle in one place.</span>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+     
+</body>
+</html>

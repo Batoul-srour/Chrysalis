@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="shortcut icon" href="../static/images/logoo.png" type="image/svg+xml"/>
+    <link rel="stylesheet" href="../static/css/style.css">
+    
+</head>
+<body>
+  <header>
+    <div class="header-ticker">
+        <ul>
+            <li>CHRYSALIS : Nourish Your Mind, Body, and Soul</li>
+            <li>Most Delicious Nutritious Meal Recipes</li>
+            <li>Fitness Classes: For Whatever Yout Body Requires</li>
+            <li>Exploring the depths of mental well-being, one article at a time.</li>
+        </ul>
+    </div>
+    
+    <nav>
+      <div class="navbar">
+          <a href="{{ url_for('index') }}" class="navbar-logo"></a>
+          <div class="navbar-links">
+              <a href="{{ url_for('index') }}">Home</a>
+              <a href="{{ url_for('recipes') }}">Recipes</a>
+              <a href="{{ url_for('fitness') }}">Fitness</a>
+              <a href="{{ url_for('mental_health') }}">Mental Health</a>
+              <a href="{{ url_for('admin_login') }}" class="admin-button">Admin</a>
+              {% if 'user_id' in session %}
+              <li><a href="{{ url_for('logout') }}" class="logout-button">Logout</a></li>
+          {% endif %}
+          </div>
+          <a href="{{ url_for('login') }}" class="navbar-joinlogo"></a>
+      </div>
+  </nav>
+</header>
+    <div class="form-container">
+        <h2>Sign Up</h2>
+        <form action="/signup" method="post">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+    <footer class="footer">
+        <div class="footer__addr">
+          <h1 class="footer__logo">CHRYSALIS</h1>
+              
+          <h2>Contact Us</h2>
+          
+          <address>
+            Ghobeiry, Old Airport Road, Beirut, Lebanon
+            <br>
+            maj032@usal.edu.lb
+          </address>
+  
+        </div>
+        
+        <footer class="footer">
+          <div class="footer__addr">
+            <h1 class="footer__logo">CHRYSALIS</h1>
+            <h2>Contact Us</h2>
+            <address>
+              Ghobeiry, Old Airport Road, Beirut, Lebanon
+              <br>
+              maj032@usal.edu.lb
+            </address>
+          </div>
+          
+          <ul class="footer__nav">
+            <li class="nav__item">
+              <h2 class="nav__title">Our Links</h2>
+              <ul class="nav__ul">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('fitness') }}">Fitness</a></li>
+                <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
+                <li><a href="{{ url_for('store') }}">Shop</a></li>
+              </ul>
+            </li>
+            <li class="nav__item">
+              <h2 class="nav__title">Legal</h2>
+              <ul class="nav__ul">
+                <li><a href="{{ url_for('privacy_policy') }}">Privacy Policy</a></li>
+                <li><a href="{{ url_for('sitemap') }}">Sitemap</a></li>
+              </ul>
+            </li>
+          </ul>
+          
+          <ul class="footer__nav">
+            <li class="nav__item">
+              <h2 class="nav__title">Our Socials</h2>
+              <ul class="socialList nav__ul">
+                <li><a href="https://www.facebook.com/Usal.uni/" target="_blank" class="socialIcons"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="Facebook"/></a></li>
+                <li><a href="https://www.instagram.com/m_a_r_j_a_y/?hl=en" target="_blank" class="socialIcons"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram"/></a></li>
+                <li><a href="https://marketing.twitter.com/en/insights/covid19-trends-health-wellness" target="_blank" class="socialIcons"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="Twitter"/></a></li>
+              </ul>
+            </li>
+          </ul>
+          
+          <div class="legal">
+            <p>© 2024 CHRYSALIS. All rights reserved.</p>
+            <div class="legal__links">
+              <span>All what you need for a perfect healthy lifestyle in one place.</span>
+            </div>
+          </div>
+        </footer>
+        
+    
+</body>
+</html>
