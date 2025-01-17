@@ -1,0 +1,275 @@
+:root {
+  --background: #f8f0c6;
+  --white: #fefae0;
+  --green: #4F7942;
+  --brown: #806033;
+  --lightgreen: #83ac76;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  
+}
+
+.header-ticker {
+  background-color: var(--green);
+  color: white;
+  overflow: hidden;
+}
+
+.header-ticker ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  animation: ticker 30s linear infinite;
+}
+
+.header-ticker li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.navbar {
+  background-color: var(--brown);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 8px;
+}
+
+.navbar-logo {
+  background-image: url(/static/images/logo2.png);
+  background-repeat: no-repeat;
+  height: 45px;
+  width: 200px;
+  margin-top: -15px;
+}
+
+.navbar-joinlogo {
+  background-image: url(/static/images/join.png);
+  background-repeat: no-repeat;
+  height: 70px;
+  width: 100px;
+  background-size: contain;
+  margin-right: 20px;
+  display: block;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.navbar-links a:hover {
+  color: var(--lightgreen);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-right: 35%;
+  margin-left: 35%;
+  background-color: var(--background);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(94, 156, 36, 0.473);
+  width: 30%;
+  text-align: center;
+
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: var(--brown);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--brown);
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+button {
+  padding: 10px;
+  background-color: var(--green);
+  color: var(--background);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+button:hover {
+  background-color: var(--lightgreen);
+}
+
+p {
+  margin-top: 15px;
+  color: var(--brown);
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px;
+  color: #2f2f2f;
+  background-color: var(--brown);
+  border-top: 1px solid var(--green);
+}
+
+.footer > * {
+  flex: 1 1 100%;
+}
+
+.footer__addr {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+  flex: 1 0;
+}
+
+.footer__logo {
+  font-family: "Fantasy", Papyrus;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 100%;
+  font-weight: 400;
+  color: var(--lightgreen);
+}
+
+.nav__title {
+  color: var(--lightgreen);
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer address {
+  font-style: normal;
+  color: var(--white);
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+  color: var(--lightgreen);
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--lightgreen);
+  font-size: 1.2em;
+}
+
+.footer__nav {
+  margin-left: 100px;
+  padding: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 2 0;
+}
+
+.footer__nav > * {
+  flex: 1 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav__ul a {
+  color: var(--white);
+}
+
+.nav__ul--extra {
+  column-count: 2;
+  column-gap: 1.25em;
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--white);
+}
+
+.legal__links {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item--extra {
+  flex-grow: 2;
+}
+
+.socialList {
+  display: flex;
+  list-style: none;
+}
+
+.socialIcons {
+  display: inline-block;
+  margin-right: 10px;
+  width: 40px;
+}
+
+.socialIcons img {
+  width: 100%;
+  height: auto;
+}
