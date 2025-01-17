@@ -1,6 +1,3 @@
-Here’s a summarized version of the README:
-
----
 
 ## Chrysalis: Recipe and Mental Health Platform
 
